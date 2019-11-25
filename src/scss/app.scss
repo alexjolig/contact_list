@@ -57,13 +57,16 @@ html, body {
   background: #ddd;
   padding: 3rem;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
   & div {
     border-bottom: 3px dotted #9f9f9f;
     padding: 1rem;
     cursor: pointer;
-    display: inline-block;
-    width: 50%;
+    flex: 50%;
     transition: background 0.5s;
+    display: flex;
+    align-items: center;
     &:hover {
       background: #cecece;
     }

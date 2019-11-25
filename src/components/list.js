@@ -26,6 +26,9 @@ function List() {
           <h3>{contact.name.first}, {contact.name.last}</h3>
         </div>
       ))}
+      <address>
+        <a href="https://github.com/alexjolig/contact_list" target="_blank" rel="noopener noreferrer"> Source code </a>
+      </address>
     </div>
   );
 }
