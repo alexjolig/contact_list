@@ -7,7 +7,7 @@ A React application using `react hooks`, `react-redux` `redux-saga` and `axios`.
 - Responsive
 
 ## Live Demo
-There's a [live demo]https://contact-list-3.firebaseapp.com/) to check out how does the app look like before trying it out.
+There's a [live demo](https://contact-list-3.firebaseapp.com/) to check out how does the app look like before trying it out.
 
 ## Getting started
 First of all you need to install `react`. This project uses `create-react-app`. You will not be able to run this project on your computer if you do not install the `create-react-app` environment.
