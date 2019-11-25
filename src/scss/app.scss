@@ -1,0 +1,154 @@
+$mobile-width: 576px;
+$large-width: 992px;
+html, body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+#root {
+    height: 100%;
+}
+.tab-container {
+  display: flex;
+  width: 100%;
+  height: 5%;
+  @media screen and (max-width: $large-width) {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .tab {
+    flex: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 2rem;
+    background: #ddd;
+    border: 1px solid #b9b9b9;
+    border-radius: 13px 13px 0 0;
+    cursor: pointer;
+    position: relative;
+    &.active {
+      border-bottom: none;
+      box-shadow: inset 0px 7px 4px -2px #bdbdbd;
+    }
+    &.disabled {
+      color: #ccc;
+    }
+    span {
+      font-size: 1rem;
+      color:
+      #888383;
+      position: absolute;
+      bottom: 0;
+      right: 3px;
+    }
+    @media screen and (max-width: $large-width) {
+      flex:20%;
+    }
+  }
+}
+.list {
+  height: 95%;
+  width: 100%;
+  background: #ddd;
+  padding: 3rem;
+  overflow-y: scroll;
+  & div {
+    border-bottom: 3px dotted #9f9f9f;
+    padding: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+    transition: background 0.5s;
+    &:hover {
+      background: #cecece;
+    }
+  }
+}
+
+.card {
+  width:40%;
+  display: none;
+  background: #ccc;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px 0px #848484, inset 0px 5px 4px 0px #848383 ,inset 0px -5px 4px 0px #848383;
+  border-radius: 4px;
+  &.active {
+    display: flex;
+  }
+  .image-holder {
+    flex:25%;
+    text-align: center;
+    img {
+      border-radius: 50%;
+      box-shadow: 0 1px 5px #686262;
+    }
+  }
+  .contact-info {
+    flex: 75%;
+    h2 {
+      color: #868686;
+      margin-bottom: 0.5rem;
+    }
+    div {
+      padding: 0.2rem;
+      strong {
+        width: 20%;
+        display: inline-block;
+      }
+    }
+  }
+  .username {
+    position: absolute;
+    right: 35px;
+    top: 175px;
+    transform: rotate(90deg);
+    background: #c62727;
+    color: #fff;
+    padding: 0.5rem;
+    transform-origin: right;
+    background: linear-gradient(18deg, #ff4317,#c62727, #ff4317);
+    box-shadow: 3px 0 6px 0px #606060;
+  }
+  .close {
+    position: absolute;
+    left: 8px;
+    top: 14px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 25px;
+      width: 2px;
+      background-color: #333;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  @media screen and (max-width: $large-width) {
+    width: 60%;
+  }
+  @media screen and (max-width: $mobile-width) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
